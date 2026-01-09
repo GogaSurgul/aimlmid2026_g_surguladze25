@@ -14,15 +14,28 @@ Result: r ≈ 0.999, which indicates a very strong positive linear correlation b
 
 
 
+Task 2 – Spam Email Detection (Logistic Regression)
 
-Task 2 – Spam Detection using Logistic Regression
+I used the provided dataset `g_surguladze25_82519.csv` with the following features:
+- words, links, capital_words, spam_word_count
+and the target label `is_spam` (0 = legitimate, 1 = spam).
 
-The provided CSV dataset contains numerical features related to email content, such as number of words, links, capital words, and spam-related words.
+I trained a Logistic Regression classifier using a 70/30 train-test split.
+Model performance on the test set:
+- Accuracy: 0.9533
+- Confusion Matrix: [[366, 10], [25, 349]]
+A full classification report is printed by the console application.
 
-A Logistic Regression classifier was trained to detect spam emails. The dataset was split into training and testing subsets.
+The program also supports classifying new email text:
+1) It extracts the same numeric features from the email text,
+2) Uses the trained model to predict SPAM or LEGITIMATE.
+I tested two manually written examples (one spam and one legitimate) and the predictions were correct.
 
-Model performance was evaluated using accuracy and a classification report. The results demonstrate that Logistic Regression is effective for spam detection on this dataset.
+<img width="1415" height="831" alt="image" src="https://github.com/user-attachments/assets/c7e693fc-a24d-4254-8580-0cadf33ea0fb" />
+
+<img width="1418" height="840" alt="image" src="https://github.com/user-attachments/assets/0e4ec482-d500-4701-96b1-59effa2bd3b0" />
 
 
-<img width="1364" height="794" alt="image" src="https://github.com/user-attachments/assets/41020594-34ff-4ae5-b6dd-0b58697a450c" />
+
+
 
